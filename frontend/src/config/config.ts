@@ -1,8 +1,8 @@
 export const navigation = [
-  { label: "Inicio", href: "#" },
-  { label: "Item1", href: "#" },
-  { label: "Item2", href: "#" },
-  { label: "Contacto", href: "#" },
+  { label: "Inicio", href: "#home" },
+  { label: "Proyectos", href: "#projects" },
+  { label: "Sobre mi", href: "#about" },
+  { label: "Contacto", href: "#contact" },
 ];
 
 export const socialMedia = [
@@ -13,17 +13,16 @@ export const socialMedia = [
 ];
 
 export const heroContent = {
-  title: "Título del componente Hero",
+  title: "Emilio Soto Andrade",
   /* subtitle: "Desarrollo de sitios y aplicaciones web modernas", */
-  subtitle: "Subtítulo del componente Hero.",
+  subtitle: "Desarrollo sitios y aplicaciones web modernas",
   cto: { text: "Contacto", href: "#" },
 };
 
 export const projectsContent = {
-  title: "Sección 01",
-  /* subtitle:
-    "Colección de trabajos realizados para terceros y proyectos personales", */
-  subtitle: "Subtítulo de la sección 01",
+  title: "Proyectos",
+  subtitle:
+    "Colección de trabajos realizados para terceros y proyectos personales",
   projects: [
     {
       title: "Proyecto 01",
@@ -57,6 +56,16 @@ export const projectsContent = {
 };
 
 export const aboutContent = {
-  title: "Sección 02",
+  title: "Sobre mi",
   subtitle: "Alguito poco",
+  avatar: "/src/assets/avatar.png",
+  content: [
+    "Soy ingeniero informático y desarrollador web. Me enfoco en crear aplicaciones web claras, funcionales y bien estructuradas, trabajando principalmente con TypeScript, Express y PostgreSQL. Me gusta mantener el código ordenado y aplicar buenas prácticas.",
+    "Fuera del desarrollo, disfruto hacer música y jugar videojuegos. Estas dos cosas también influyen en mi forma de trabajar: me gusta experimentar, crear y mejorar constantemente lo que hago.",
+  ],
+};
+
+export const contactContent = {
+  title: "Contacto",
+  subtitle: "Si tienes una idea o proyecto en mente, hablemos.",
 };

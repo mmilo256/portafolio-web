@@ -1,17 +1,34 @@
+import Container from "../components/Container";
+
 interface Props {
-    children: React.ReactNode,
-    title: string,
-    subtitle?: string
+  children: React.ReactNode;
+  id: string;
+  title: string;
+  subtitle?: string;
+  dark?: boolean;
 }
 
-const SectionLayout = ({ children, title, subtitle }: Props) => {
-    return (
-        <section className="mt-12">
-            <h2 className="pt-4 text-center mb-2 text-3xl md:text-4xl">{title}</h2>
-            {subtitle && <p className="text-center pb-8">{subtitle}</p>}
-            {children}
-        </section>
-    )
-}
+const SectionLayout = ({
+  children,
+  id,
+  title,
+  subtitle,
+  dark = false,
+}: Props) => {
+  return (
+    <section
+      id={id}
+      className={`pt-30 pb-10 ${dark && "bg-slate-700 text-white"}`}
+    >
+      <Container>
+        <h2 className="mb-2 font-bold text-center text-4xl md:text-4xl">
+          {title}
+        </h2>
+        {subtitle && <p className="text-center mb-10">{subtitle}</p>}
+      </Container>
+      {children}
+    </section>
+  );
+};
 
-export default SectionLayout
+export default SectionLayout;
