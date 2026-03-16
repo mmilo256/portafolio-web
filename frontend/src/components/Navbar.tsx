@@ -3,6 +3,8 @@ import Container from "./Container";
 import { navigation } from "../config/config";
 import logo from "../assets/logo-light.png";
 import { NavLink, useLocation } from "react-router";
+import { IoIosMenu } from "react-icons/io";
+import RedesSociales from "./RedesSociales";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,9 +21,8 @@ const Navbar = () => {
     <>
       {/* Menú móvil */}
       <ul
-        className={`z-20 ${
-          toggleMenu ? "w-auto" : "w-0"
-        } overflow-hidden flex md:hidden fixed flex-col gap-2 inset-0 right-20 sm:right-80 pt-24 bg-white/95 border border-slate-300`}
+        className={`pl-4 z-20 ${toggleMenu ? "translate-x-0" : "-translate-x-full"
+          } overflow-hidden md:hidden fixed inset-0 right-20 sm:right-80 pt-24 bg-white/95 border border-slate-300`}
       >
         {navigation.map((item) => (
           <li
@@ -32,14 +33,14 @@ const Navbar = () => {
           >
             {isHome ? (
               <a
-                className="py-4 px-4 block border-b border-slate-200"
+                className="font-bold uppercase py-8 block hover:bg-slate-500 hover:text-white"
                 href={`${item.href}`}
               >
                 {item.label}
               </a>
             ) : (
               <NavLink
-                className="py-4 px-4 block border-b border-slate-200"
+                className="font-bold uppercase py-8 block hover:bg-slate-500 hover:text-white"
                 to={`/${item.href}`}
               >
                 {item.label}
@@ -47,11 +48,13 @@ const Navbar = () => {
             )}
           </li>
         ))}
+        <hr className="my-4 pr-10" />
+        <RedesSociales />
       </ul>
       <nav className="bg-white border-b z-10 border-slate-300 h-20 fixed w-full">
         <Container className="flex h-full justify-between items-center">
-          <a href="#">
-            <img className="w-18" src={logo} alt="" />
+          <a href="/">
+            <img className="w-18" src={logo} alt="logo" />
           </a>
 
           {/* Menú pantallas grandes */}
@@ -64,15 +67,15 @@ const Navbar = () => {
                 key={item.label}
               >
                 {isHome ? (
-                  <a href={`${item.href}`}>{item.label}</a>
+                  <a className="hover:border-b-2 hover:border-blue-300 font-bold uppercase" href={`${item.href}`}>{item.label}</a>
                 ) : (
-                  <NavLink to={`/${item.href}`}>{item.label}</NavLink>
+                  <NavLink className="hover:border-b-2 hover:border-blue-300 font-bold uppercase" to={`/${item.href}`}>{item.label}</NavLink>
                 )}
               </li>
             ))}
           </ul>
-          <button className="md:hidden" onClick={onToggleMenu}>
-            Menú
+          <button className="md:hidden cursor-pointer hover:bg-slate-200 active:bg-slate-200 rounded" onClick={onToggleMenu}>
+            <IoIosMenu size={50} />
           </button>
         </Container>
       </nav>

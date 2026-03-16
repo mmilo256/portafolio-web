@@ -1,3 +1,8 @@
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+
 export const navigation = [
   { label: "Inicio", href: "#home" },
   { label: "Proyectos", href: "#projects" },
@@ -6,10 +11,10 @@ export const navigation = [
 ];
 
 export const socialMedia = [
-  { label: "LinkedIn", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "Instagram", href: "#" },
+  { label: "LinkedIn", href: "#", icon: FaLinkedin },
+  { label: "GitHub", href: "#", icon: FaGithub },
+  { label: "YouTube", href: "#", icon: IoLogoYoutube },
+  { label: "Instagram", href: "#", icon: FaInstagram },
 ];
 
 export const heroContent = {

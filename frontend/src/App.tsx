@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import MainLayout from "./layouts/MainLayout";
-import Landing from "./components/pages/Landing";
-import Proyectos from "./components/pages/Proyectos";
+import Landing from "./pages/Landing";
+import Proyectos from "./pages/Proyectos";
 // import Proyectos from "./components/pages/Proyectos";
 
 const App = () => {

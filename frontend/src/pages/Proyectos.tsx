@@ -1,7 +1,8 @@
-import { projectsContent } from "../../config/config";
-import SectionLayout from "../../layouts/SectionLayout";
-import Card from "../Card";
-import Container from "../Container";
+import Card from "../components/Card";
+import Container from "../components/Container";
+import { projectsContent } from "../config/config";
+import SectionLayout from "../layouts/SectionLayout";
+
 
 const Proyectos = () => {
   return (
